@@ -1,19 +1,5 @@
 const fetch = require('node-fetch');
 
-// const forcastTemplate = () => {
-//   // const weekDay = ;
-//   // const 
-
-//   return (`
-// 🗓 - Monday (2021-02-26)
-
-// 🌨 Snow ☔️Rain ☁️Foggy ☀️Sun
-// Temperature: +7
-// Feels Like: -10
-// Wind Speed: 8 m/s
-// Direction: SE`); 
-
-// }
 class BaseRequest {
   constructor(cityId) {
     this.cityId = cityId;
@@ -51,5 +37,22 @@ Direction: ${data.wind.deg}
 
   // 🌨 Snow ☔️ Rain ☁️ Foggy ☀️ Sun
 }
+
+
+
+// const forcastTemplate = () => {
+//   // const weekDay = ;
+//   // const 
+
+//   return (`
+// 🗓 - Monday (2021-02-26)
+
+// 🌨 Snow ☔️Rain ☁️Foggy ☀️Sun
+// Temperature: +7
+// Feels Like: -10
+// Wind Speed: 8 m/s
+// Direction: SE`); 
+
+// }
 
 module.exports = BaseRequest;
