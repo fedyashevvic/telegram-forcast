@@ -1,19 +1,19 @@
 const fetch = require('node-fetch');
 
-const forcastTemplate = () => {
-  // const weekDay = ;
-  // const 
+// const forcastTemplate = () => {
+//   // const weekDay = ;
+//   // const 
 
-  return (`
-🗓 - Monday (2021-02-26)
+//   return (`
+// 🗓 - Monday (2021-02-26)
 
-🌨 Snow ☔️Rain ☁️Foggy ☀️Sun
-Temperature: +7
-Feels Like: -10
-Wind Speed: 8 m/s
-Direction: SE`); 
+// 🌨 Snow ☔️Rain ☁️Foggy ☀️Sun
+// Temperature: +7
+// Feels Like: -10
+// Wind Speed: 8 m/s
+// Direction: SE`); 
 
-}
+// }
 class BaseRequest {
   constructor(cityId) {
     this.cityId = cityId;
@@ -22,7 +22,6 @@ class BaseRequest {
     this.weatherData = null;
     this.sevenDaysApi = null;
   }
-
   getCurrentWeather() {
     this.apiLink = `https://api.openweathermap.org/data/2.5/weather?id=${this.cityId}&appid=7b9f67b52832ae2d71b832446b81dc5b`;
 

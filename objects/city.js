@@ -23,11 +23,23 @@ class City {
   findCity(city) {
     const cities = (JSON.parse(this.allCities));
     const foundCity = cities.find((x) => {
-      return x.name.toLowerCase() == city.toLowerCase() || x.name.toLowerCase().includes(city.toLowerCase());
+      return x.name.toLowerCase() == city.toLowerCase();
     });
-    this._updateCity(foundCity.id, foundCity.name);
-    console.log(this.cityName);
+
+    if (foundCity) {
+      this._updateCity(foundCity.id, foundCity.name);
+    } 
     
+    return foundCity;
+  }
+  getNewCityTemplate() { 
+    return (`
+🌆🏙
+
+Your city is ${this.cityName}
+
+Now you can see the weather in ${this.cityName} by pressing "Current Weather" button on the keyboard OR you can select some other city by pressing "Change City" button.
+    `);
   }
 }
 
